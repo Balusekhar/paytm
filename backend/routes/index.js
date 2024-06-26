@@ -1,16 +1,7 @@
 const express = require("express");
 const router = express.Router();
+const userRouter = require("./user")
 
-router.get("signup", (req, res) => {
-  res.send("Signup route");
-});
-
-router.get("signin", (req, res) => {
-  res.send("Signin route");
-});
-
-app.get("update", (req, res) => {
-  res.send("Update user info route");
-});
+router.use("/user",userRouter)
 
 module.exports = router;
